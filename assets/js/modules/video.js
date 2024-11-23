@@ -1,4 +1,4 @@
-import { cynChangePopup } from "../utils/custom-events";
+import { cynChangePopup } from "../utils/custom-events.js";
 import { activateEl, deActivateEl } from "../utils/functions";
 import { popupBackdrop, popupBackdropContent } from "./popup";
 

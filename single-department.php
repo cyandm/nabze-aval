@@ -47,10 +47,12 @@
             </div>
         </div>
 
+        <div class="py-9"></div>
+
         <!--Desktop Section 1 -->
         <div class="hidden md:block">
             <?php if (get_field('section_1_img') || get_field('section_1_title') || get_field('section_1_txt')): ?>
-                <div class="grid grid-cols-3 gap-11 py-11 items-center">
+                <div class="grid grid-cols-3 gap-11 items-center">
 
                     <div class="col-span-3 md:col-span-2 flex flex-col justify-center gap-6">
                         <p class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_1_title'); ?></p>
@@ -65,8 +67,10 @@
                 </div>
             <?php endif; ?>
 
+            <div class="py-3"></div>
+
             <?php if (get_field('section_2_img') || get_field('section_2_title') || get_field('section_2_txt')): ?>
-                <div class="grid grid-cols-3 gap-11 py-11">
+                <div class="grid grid-cols-3 gap-11">
                     <div class="col-span-3 md:col-span-1">
                         <?php echo wp_get_attachment_image(get_field('section_2_img'), 'full', false, ['class' => ' rounded-[20px]']); ?>
                     </div>
@@ -125,6 +129,8 @@
                 </div>
             <?php endif; ?>
         </div>
+
+        <div class="py-8"></div>
 
         <!-- Numbers -->
         <div class="bg-primary-100 rounded-[20px] p-5 flex flex-col gap-7">
@@ -307,7 +313,6 @@
         <?php endif; ?>
 
     </section>
-
 
 
 
