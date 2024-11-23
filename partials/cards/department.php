@@ -7,7 +7,7 @@ if ($postId === 0) {
 
 
 
-$terms = get_the_terms($postId, 'service-cat');
+$terms = get_the_terms($postId, 'department-cat');
 
 
 ?>

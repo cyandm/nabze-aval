@@ -17,14 +17,14 @@
         $menu = cyn_get_menu_items_by_slug('mobile_header');
         foreach ($menu as $menu_item): ?>
 
-            <div class="<?php echo $menu_item->child_items ? 'has-child' : '' ?>">
+            <div class="<?php echo !empty($menu_item->child_items) ? 'has-child' : '' ?>">
 
                 <div class="flex justify-between items-center py-3 text-primary-40">
                     <a href="<?php echo $menu_item->url ?>">
-                        <?php echo $menu_item->post_title; ?>
+                        <?php echo $menu_item->title; ?>
                     </a>
 
-                    <?php if ($menu_item->child_items): ?>
+                    <?php if (!empty($menu_item->child_items)): ?>
                         <svg class="icon size-4 transition-all">
                             <use href="#icon-chevron-down"></use>
                         </svg>
@@ -32,12 +32,12 @@
                 </div>
 
 
-                <?php if ($menu_item->child_items): ?>
+                <?php if (!empty($menu_item->child_items)): ?>
                     <div class="bg-primary-90 grid grid-rows-[0fr] transition-all | accordion">
                         <div class="overflow-hidden flex flex-col">
                             <?php foreach ($menu_item->child_items as $child): ?>
                                 <a href="<?php echo $child->url ?>" class="py-3 px-2 inline-block">
-                                    <?php echo $child->post_title ?>
+                                    <?php echo $child->title ?>
                                 </a>
                             <?php endforeach; ?>
                         </div>

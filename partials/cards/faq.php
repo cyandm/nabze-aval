@@ -14,7 +14,7 @@ if ($postId === 0) {
         </span>
 
         <svg class="icon size-4 fill-primary-50 stroke-primary-50 text-primary-50 transition-all">
-            <use href="#icon-plus"></use>
+            <use href="#icon-e-add"></use>
         </svg>
     </div>
 

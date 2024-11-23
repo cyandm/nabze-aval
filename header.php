@@ -11,8 +11,6 @@
 
 <body <?php body_class('bg-background-main font-peyda text-primary-20') ?>>
 	<?php get_template_part('/assets/icons/icons') ?>
-	<?php get_template_part('/partials/components/reserve-popup')
-		?>
 
 	<?php wp_body_open() ?>
 	<?php //cyn_get_component('preloader') 
@@ -29,15 +27,15 @@
 				<nav class="flex gap-4 max-xl:hidden ">
 					<?php
 					$menu = cyn_get_menu_items_by_slug('header');
-
+					
 					foreach ($menu as $menu_item): ?>
 
 						<div class="text-primary-50 flex gap-1 items-center relative group">
 							<a href="<?php echo $menu_item->url ?>">
-								<?php echo $menu_item->post_title; ?>
+								<?php echo $menu_item->title; ?>
 							</a>
 
-							<?php if ($menu_item->child_items): ?>
+							<?php if (!empty($menu_item->child_items)): ?>
 								<svg class="icon size-4">
 									<use href="#icon-chevron-down"></use>
 								</svg>
@@ -48,7 +46,7 @@
 										<?php foreach ($menu_item->child_items as $index => $child): ?>
 											<div class="px-4 py-3 text-primary-20">
 												<a href="<?php echo $child->url ?>">
-													<?php echo $child->post_title ?>
+													<?php echo $child->title ?>
 												</a>
 											</div>
 										<?php endforeach; ?>
@@ -76,7 +74,7 @@
 					</svg>
 				</a>
 
-				<cyn-button class="reservePopUpOpener " type="primary" size="md" href="#">
+				<cyn-button type="primary" size="md" href="<?php echo 'tel:' . get_option("cyn_special_number") ?>">
 					<?php _e('تماس بگیر', 'cyn-dm') ?>
 				</cyn-button>
 			</div>

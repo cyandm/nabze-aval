@@ -1,6 +1,6 @@
-<div class="flex gap-3 w-full max-lg:flex-col container">
+<div class="flex gap-3 w-full max-xl:flex-col container">
     <!-- Text content for mobile -->
-    <div class="lg:hidden">
+    <div class="xl:hidden">
         <div anim-delay="0.5" class="p-4 rounded-2xl text-[#1E3A8A] space-y-4 bg-primary-100 fade-in-down">
             <div class="space-y-2">
                 <div class="text-h2 md:text-[70px] font-extrabold">
@@ -14,7 +14,7 @@
                     ?>
                 </div>
 
-                <div class="text-h4 md:text-h2">
+                <div class="text-h4 md:text-h2 text-[#666666]">
                     <?php
                     $hero_subtitle = get_field('hero_subtitle');
                     if ($hero_subtitle) {
@@ -25,8 +25,8 @@
                     ?>
                 </div>
 
-                <div class="flex flex-row justify-center">
-                    <div class="text-body_s md:text-h5">
+                <div class="flex flex-row">
+                    <div class="text-body_s md:text-h5 text-[#666666]">
                         <?php echo get_field('hero_desc') ?>
                     </div>
 
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Hero image -->
-    <div class="w-full flex-1 h-full aspect-square bg-no-repeat bg-cover rounded-3xl overflow-hidden flex gap-3 p-4 items-end fade-in-down"
+    <div class="w-full flex-1 h-full aspect-square bg-no-repeat bg-contain rounded-3xl overflow-hidden flex gap-3 p-4 items-end fade-in-down"
         anim-delay="0.7"
         style="background-image: url('<?php echo wp_get_attachment_image_url(get_field('hero_banner'), 'full') ?>')">
     </div>
@@ -85,7 +85,7 @@
     <!-- Desktop content container -->
     <div class="flex-1 space-y-3">
         <!-- Desktop text content -->
-        <div anim-delay="0.5" class="p-4 rounded-2xl text-[#1E3A8A] space-y-4 hidden lg:block fade-in-down">
+        <div anim-delay="0.5" class="p-4 rounded-2xl text-[#1E3A8A] space-y-4 hidden xl:block fade-in-down">
             <div class="space-y-2">
 
                 <div class="text-h2 md:text-[70px] font-extrabold">
@@ -94,12 +94,12 @@
                     if ($hero_title) {
                         echo $hero_title;
                     } else {
-                        echo 'Hero Title Not Found'; // Debug message
+                        echo 'Hero Title Not Found'; 
                     }
                     ?>
                 </div>
 
-                <div class="text-h4 md:text-h2">
+                <div class="text-h4 md:text-h2 text-[#666666]">
                     <?php
                     $hero_subtitle = get_field('hero_subtitle');
                     if ($hero_subtitle) {
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="flex flex-row">
-                    <div class="text-body_s md:text-h5">
+                    <div class="text-body_s md:text-h5 text-[#666666]">
                         <?php echo get_field('hero_desc') ?>
                     </div>
 
@@ -189,7 +189,6 @@
                         </div>
                     <?php endif; ?>
                 <?php endfor; ?>
-
             </div>
         </div>
     </div>

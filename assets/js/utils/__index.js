@@ -1,2 +1,2 @@
-import './custom-events.js';
+import './custom-events';
 import './functions';

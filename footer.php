@@ -187,6 +187,7 @@
 
     </footer>
 <?php endif; ?>
+<?php cyn_get_popup('backdrop'); ?>
 
 <div class="wp-scripts">
     <?php wp_footer() ?>

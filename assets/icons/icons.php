@@ -258,4 +258,27 @@
                 stroke-linejoin="round" fill="none"></path>
         </g>
     </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 18 18">
+        <title>chevron down</title>
+        <g class="nc-icon-wrapper">
+            <path d="M15.25 6.5L9 12.75L2.75 6.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                fill="none"></path>
+        </g>
+    </symbol>
+    <symbol id="icon-Send" viewBox="0 0 24 25">
+        <title>Send</title>
+        <g class="nc-icon-wrapper">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.9209 19.6396L19.9199 6.15464C20.2919 5.14964 19.3139 4.17164 18.3089 4.54364L4.81794 9.54664C3.66294 9.97464 3.75394 11.6366 4.94794 11.9366L11.0149 13.4606L12.5299 19.5086C12.8289 20.7036 14.4919 20.7956 14.9209 19.6396V19.6396Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+        </g>
+    </symbol>
+    <symbol id="icon-Reply,-Emails,-Letter,-Mail-1" viewBox="0 0 24 25">
+        <title>Reply, Emails, Letter, Mail 1</title>
+        <g class="nc-icon-wrapper">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11 13.9212V16.9892C11 17.8562 9.971 18.3122 9.328 17.7302L3.298 12.2642C2.85 11.8582 2.862 11.1512 3.323 10.7612L9.353 5.64319C10.003 5.09119 11 5.55319 11 6.40519V8.84219C16.463 8.84219 21 12.2142 21 17.8242V18.9532C19.153 15.2692 15.313 13.9212 11 13.9212Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+        </g>
+    </symbol>
 </svg>

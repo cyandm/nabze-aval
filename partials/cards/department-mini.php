@@ -7,7 +7,7 @@ if ($postId === 0) {
     throw new ErrorException('post id is invalid', 0, E_WARNING);
 }
 
-$terms = get_the_terms($postId, 'service-cat');
+$terms = get_the_terms($postId, 'department-cat');
 
 ?>
 <div class="rounded-2xl overflow-hidden flex flex-col text-primary-20 p-2 bg-primary-100 isolate hover:rotate-2 transition-all duration-300 ">

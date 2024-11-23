@@ -33,7 +33,7 @@ if ($postId === 0) {
                     data-acf-field="video_file">
                     <cyn-button type="primary"
                         icon-position="left"
-                        icon="#icon-icon">
+                        icon="#icon-Play,-Next-1">
                         <?php _e('پخش ویدئو', 'cyn-dm') ?>
                     </cyn-button>
                 </div>

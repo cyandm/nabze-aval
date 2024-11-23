@@ -17,13 +17,14 @@ if (!class_exists('cyn_register')) {
 		{
 			register_nav_menus([
 				'header' => "Header",
+				'mobile_header' => "Mobile Header",
 				'footer' => "Footer",
 			]);
 		}
 
 		public function cyn_post_type_register()
 		{
-			$this->cyn_make_post_type('service', 'خدمت', 'خدمات', 'dashicons-info', ['title', 'thumbnail', 'editor', 'comments']);
+			$this->cyn_make_post_type('department', 'دپارتمان', 'دپارتمان ها', 'dashicons-info', ['title', 'thumbnail', 'editor', 'comments']);
 			$this->cyn_make_post_type('video', 'ویدئو', 'ویدئو ها', 'dashicons-video-alt3');
 			$this->cyn_make_post_type('testimonial', 'نظر', 'نظرات بیماران', 'dashicons-format-chat', ['title', 'thumbnail', 'editor']);
 			$this->cyn_make_post_type('faq', 'سوال', 'سوالات متداول', 'dashicons-lightbulb', ['title', 'editor']);
@@ -33,14 +34,13 @@ if (!class_exists('cyn_register')) {
 		public function cyn_taxonomy_register()
 		{
 
-			$this->cyn_make_taxonomy('service-cat', '  دسته بندی خدمات ', 'دسته بندی های خدمات', ['service']);
+			$this->cyn_make_taxonomy('department-cat', 'دسته بندی دپارتمان ها ', 'دسته بندی های دپارتمان ها', ['department']);
 			$this->cyn_make_taxonomy('faq-cat', '  دسته بندی ', 'دسته بندی ها', ['faq']);
-			$this->cyn_make_taxonomy('special-services', ' خدمت ویژه', 'خدمات ویژه', ['service']);
 		}
 
 		public function cyn_term_register()
 		{
-			wp_insert_term('نوشته های ویژه', 'special-services', ['slug' => 'special-service']);
+			wp_insert_term('نوشته های ویژه', 'special-departments', ['slug' => 'special-department']);
 
 
 			// wp_insert_term( 'name', 'taxonomy', [ 'slug' => 'slug' ] );
