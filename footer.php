@@ -124,29 +124,16 @@
                                 <?php _e('دسترسی سریع', 'cyn-dm') ?>
                             </span>
 
-                            <div class="space-y-3">
+                            <div class="text-[#D8DADF] text-body_s">
                                 <?php
-                                $quick_services = get_terms([
-                                    'taxonomy' => 'quick_service', // Replace with your taxonomy name
-                                    'hide_empty' => false,
-                                    'meta_query' => [
-                                        [
-                                            'key' => 'show_in_footer',
-                                            'value' => '1',
-                                            'compare' => '='
-                                        ]
-                                    ]
+                                
+                                wp_nav_menu([
+                                    'theme_location' => 'footer',
+                                    'container' => false,
+                                    'items_wrap' => '<div class="flex flex-col gap-2 list-none">%3$s</div>',
                                 ]);
 
-                                if (!empty($quick_services) && !is_wp_error($quick_services)):
-                                    foreach ($quick_services as $service): ?>
-                                        <div class="text-primary-80 text-body_s">
-                                            <a href="<?php echo get_term_link($service); ?>">
-                                                <?php echo $service->name; ?>
-                                            </a>
-                                        </div>
-                                    <?php endforeach;
-                                endif; ?>
+                                ?>
                             </div>
                         </div>
                     </div>

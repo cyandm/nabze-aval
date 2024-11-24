@@ -26,9 +26,10 @@ $faq_select = get_field('faq-cat');
 					</div>
 				</div>
 			<?php endforeach; ?>
+
 			<div class="fade-in-down" anim-delay="<?php echo count($faq_select) * 0.3 ?>">
 				<cyn-button type="primary" class="justify-center"
-					href="#">
+					href="<?php echo get_option('cyn_faq_btn')?>">
 					<?php _e('تماس با ما', 'cyn-dm') ?>
 				</cyn-button>
 			</div>

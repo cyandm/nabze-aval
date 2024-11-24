@@ -290,7 +290,8 @@
 
         <!-- Content -->
         <div
-            class="prose-h2:text-[#3C3F49] prose-h2:text-h5 prose-h2:md:text-h2 prose-p:text-[#6A6F81] prose-p:leading-[34px] prose-p:text-body_s">
+        style="max-width: unset !important"
+            class="prose-h2:text-[#3C3F49] prose-h3:text-[#3C3F49] prose-p:text-[#6A6F81] prose-p:leading-[34px] prose-p:text-body_s">
             <?php the_content() ?>
         </div>
 
@@ -313,8 +314,6 @@
         <?php endif; ?>
 
     </section>
-
-
 
     <div class="pt-[48px]"></div>
 

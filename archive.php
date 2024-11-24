@@ -1,16 +1,14 @@
 <!-- Archive Blog Page -->
 <?php get_header() ?>
 
-<?php cyn_get_component('breadcrumb') ?>
-
 <main class="container grid grid-cols-4 gap-3">
 
-    <!-- Side Bar
+    <!-- Side Bar -->
     <section class="col-span-1 max-lg:col-span-4 max-lg:order-1">
 
-        <?php //cyn_get_component("blog-side-bar") ?>
+        <?php cyn_get_component("blog-side-bar") ?>
 
-    </section> -->
+    </section> 
 
     <!-- Blog Card -->
     <section class="space-y-3 col-span-3 max-lg:col-span-4 max-xl:mx-5">
@@ -39,5 +37,7 @@
     </section>
 
 </main>
+
+<div class="py-8"></div>
 
 <?php get_footer() ?>

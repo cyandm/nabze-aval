@@ -40,9 +40,6 @@ if (!class_exists('cyn_register')) {
 
 		public function cyn_term_register()
 		{
-			wp_insert_term('نوشته های ویژه', 'special-departments', ['slug' => 'special-department']);
-
-
 			// wp_insert_term( 'name', 'taxonomy', [ 'slug' => 'slug' ] );
 		}
 

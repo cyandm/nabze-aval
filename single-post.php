@@ -69,6 +69,6 @@ $authorId = $post->post_author;
 
 </main>
 
-
+<div class="py-8"></div>
 
 <?php get_footer() ?>

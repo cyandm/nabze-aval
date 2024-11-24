@@ -13141,9 +13141,11 @@
   setupPlyr();
   window.addEventListener("cynChangePopup", setupPlyr);
 
-  // assets/js/utils/custom-events.js
-  var cynActivate = new Event("cynActivate");
-  var cynChangePopup = new Event("cynChangePopup");
+  // assets/js/utils/custom-event.js
+  var cynActivate = new CustomEvent("cynActivate", { bubbles: true });
+  var cynChangePopup = new CustomEvent("cynChangePopup", {
+    bubbles: true
+  });
 
   // assets/js/utils/functions.js
   var deActivateEl = (nodeEl) => {

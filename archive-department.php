@@ -19,10 +19,10 @@ global $wp_query;
 		<div class="grid grid-cols-3 max-xl:grid-cols-2 max-sm:grid-cols-1 gap-3  max-md:hidden">
 
 			<?php
-			if ( $wp_query->have_posts() ) :
+			if ($wp_query->have_posts()):
 
-				foreach ( $wp_query->get_posts() as $post ) {
-					cyn_get_card( 'department', [ 'post-id' => $post->ID, 'class' => 'min-h-[400px] first:col-span-2' ] );
+				foreach ($wp_query->get_posts() as $post) {
+					cyn_get_card('department', ['post-id' => $post->ID, 'class' => 'min-h-[400px] first:col-span-2']);
 				}
 
 			endif;
@@ -31,21 +31,23 @@ global $wp_query;
 		</div>
 		<div class="md:hidden flex gap-3 flex-col">
 			<?php
-			if ( $wp_query->have_posts() ) :
-				foreach ( $wp_query->get_posts() as $post ) {
-					cyn_get_card( 'department-mini', [ 'post-id' => $post->ID, 'class' => 'md:hidden' ] );
+			if ($wp_query->have_posts()):
+				foreach ($wp_query->get_posts() as $post) {
+					cyn_get_card('department-mini', ['post-id' => $post->ID, 'class' => 'md:hidden']);
 				}
 
 			endif;
 			?>
 
 		</div>
+
 		<!-- Pagination -->
-		<?php cyn_get_component( 'pagination' ) ?>
+		<?php cyn_get_component('pagination') ?>
 
 	</section>
 
 </main>
 
+<div class="py-8"></div>
 
 <?php get_footer() ?>

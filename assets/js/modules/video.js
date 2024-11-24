@@ -1,6 +1,14 @@
-import { cynChangePopup } from "../utils/custom-events.js";
-import { activateEl, deActivateEl } from "../utils/functions";
-import { popupBackdrop, popupBackdropContent } from "./popup";
+import {
+  cynChangePopup
+} from "../utils/custom-event.js";
+import {
+  activateEl,
+  deActivateEl
+} from "../utils/functions";
+import {
+  popupBackdrop,
+  popupBackdropContent
+} from "./popup";
 
 function singleVideo() {
   const playBtnGroup = document.querySelectorAll(".video-card .play-btn");

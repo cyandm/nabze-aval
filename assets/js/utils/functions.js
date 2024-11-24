@@ -1,4 +1,7 @@
-import { cynActivate, cynChangePopup } from './custom-events';
+import {
+	cynActivate,
+	cynChangePopup
+} from './custom-event';
 
 export const deActivateEl = (nodeEl) => {
 	nodeEl.setAttribute('data-active', 'false');
