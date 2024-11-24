@@ -291,7 +291,7 @@
         <!-- Content -->
         <div
         style="max-width: unset !important"
-            class="prose-h2:text-[#3C3F49] prose-h3:text-[#3C3F49] prose-p:text-[#6A6F81] prose-p:leading-[34px] prose-p:text-body_s">
+            class="prose prose-h2:text-[#3C3F49] prose-h3:text-[#3C3F49] prose-p:text-[#6A6F81] prose-p:leading-[34px] prose-p:text-body_s">
             <?php the_content() ?>
         </div>
 
