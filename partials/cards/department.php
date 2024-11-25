@@ -5,8 +5,6 @@ if ($postId === 0) {
     throw new ErrorException('post id is invalid', 0, E_WARNING);
 }
 
-
-
 $terms = get_the_terms($postId, 'department-cat');
 
 

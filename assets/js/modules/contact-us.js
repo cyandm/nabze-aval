@@ -1,4 +1,7 @@
-import { errorToast, successFormToast } from "./toastify";
+import {
+  errorToast,
+  successFormToast
+} from "./toastify";
 
 function contactForm() {
   const contactForm = document.querySelector("#ContactUsForm");

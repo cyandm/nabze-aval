@@ -53,6 +53,16 @@ class cyn_rest
 
 			]
 		);
+
+		register_rest_route(
+			'cyn-api/v1',
+			'/newsletter',
+			[
+				'methods' => 'POST',
+				'callback' => [$this, 'handle_newsletter_subscription'],
+				'permission_callback' => '__return_true'
+			]
+		);
 	}
 
 
@@ -153,7 +163,7 @@ class cyn_rest
 				'gender' => $gender,
 				'services' => $services,
 				// 'reservation_time' => $reservation_time,
-				'message' =>  $message,
+				'message' => $message,
 			]
 		]);
 
@@ -167,12 +177,29 @@ class cyn_rest
 		return $response;
 	}
 
+	public function handle_newsletter_subscription(WP_REST_Request $request)
+	{
+		$email = sanitize_email($request->get_body_params()['email']);
+		// Check if the email is valid
+		if (!is_email($email)) {
+			return new WP_REST_Response(['error' => 'Invalid email address.'], 400);
+		}
+		$post_id = wp_insert_post([
+			'post_type' => 'newsletter',
+			'post_title' => $email,
+			'post_content' => $email,
+		]);
+		if ($post_id === 0 || is_wp_error($post_id)) {
+			$response = new WP_REST_Response(['post_created' => false], 500);
+		}
+		return new WP_REST_Response(['subscribed' => true], 200);
+	}
 
 	public function render_by_query($query, $post_type, array $args = [])
 	{
 		ob_start();
 		if ($query->have_posts()) {
-			while ($query->have_posts()) :
+			while ($query->have_posts()):
 				$query->the_post();
 				cyn_get_card($post_type, $args);
 			endwhile;

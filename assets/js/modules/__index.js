@@ -18,3 +18,4 @@ import "./scroll-top";
 import "./plyr";
 import "./popup";
 import "./video";
+import "./newsletter";

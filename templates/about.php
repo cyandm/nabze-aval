@@ -2,18 +2,18 @@
 
 <?php get_header() ?>
 
-<!-- Description-->
+<!-- Introduction-->
 <?php cyn_get_page_template('about/introduction') ?>
 
 <div class="py-11"></div>
 
-<!-- Crow -->
+<!-- Description -->
 <?php cyn_get_page_template('about/description') ?>
 
 <div class="py-[45px]"></div>
 
 <!-- Services -->
-<?php cyn_get_page_template('home/services') ?>
+<?php cyn_get_page_template('home/departments') ?>
 
 <div class="py-[48px] max-lg:py-[32px]"></div>
 

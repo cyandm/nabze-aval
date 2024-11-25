@@ -1,34 +1,40 @@
-<?php $postId = $args['post-id'] ?? get_the_ID(); ?>
-
-<?php $crow_img = get_field("crow_img"); ?>
+<?php $description_img = get_field("description_img"); ?>
 
 
 <div class="container grid grid-cols-2 items-center gap-10 max-lg:gap-4">
 
-    <!-- Title -->
-    <div class="col-span-2 text-h5 max-[1024px]:block min-[1024px]:hidden">
-        <?php echo get_field('crow_title') ?>
-    </div>
+    <!-- Mobile Title -->
+    <?php if (!empty(get_field('description_title'))): ?>
+        <div class="col-span-2 text-h5 max-[1024px]:block min-[1024px]:hidden">
+            <?php echo get_field('description_title') ?>
+        </div>
+    <?php endif; ?>
 
-    <!-- Crow Image -->
-    <div class="col-span-1 max-lg:col-span-2 aspect-video min-[1024px]:order-1 ">
-        <?php echo wp_get_attachment_image($crow_img, "full", false, ["class" => "rounded-3xl w-full object-cover"]) ?>
-    </div>
+    <!-- Description Image -->
+    <?php if (!empty($description_img)): ?>
+        <div class="col-span-1 max-lg:col-span-2 aspect-video min-[1024px]:order-1 ">
+            <?php echo wp_get_attachment_image($description_img, "full", false, ["class" => "rounded-3xl w-64 h-64 object-cover"]) ?>
+        </div>
+    <?php endif; ?>
 
-    <!-- Crow Texts -->
+    <!-- Description Texts -->
     <div class="col-span-1 max-lg:col-span-2 min-[1024px]:order-0">
 
         <!-- Title -->
-        <div class="text-h2 max-[1023px]:hidden">
-            <?php echo get_field('crow_title') ?>
-        </div>
+        <?php if (!empty(get_field('description_title'))): ?>
+            <div class="text-h2 max-[1023px]:hidden">
+                <?php echo get_field('description_title') ?>
+            </div>
+        <?php endif; ?>
 
         <div class="py-2"></div>
 
         <!-- Txt -->
-        <div class="text-body_s leading-8">
-            <?php echo get_field('crow_txt') ?>
-        </div>
+        <?php if (!empty(get_field('description_txt'))): ?>
+            <div class="text-body_s leading-8">
+                <?php echo get_field('description_txt') ?>
+            </div>
+        <?php endif; ?>
     </div>
 
 </div>

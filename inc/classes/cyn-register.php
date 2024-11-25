@@ -18,23 +18,25 @@ if (!class_exists('cyn_register')) {
 			register_nav_menus([
 				'header' => "Header",
 				'mobile_header' => "Mobile Header",
-				'footer' => "Footer",
+				'footer_access' => "Footer Access",
+				'footer_department' => "Footer Department",
 			]);
 		}
 
 		public function cyn_post_type_register()
 		{
-			$this->cyn_make_post_type('department', 'دپارتمان', 'دپارتمان ها', 'dashicons-info', ['title', 'thumbnail', 'editor', 'comments']);
+			$this->cyn_make_post_type('departments', 'دپارتمان', 'دپارتمان ها', 'dashicons-info', ['title', 'thumbnail', 'editor', 'comments']);
 			$this->cyn_make_post_type('video', 'ویدئو', 'ویدئو ها', 'dashicons-video-alt3');
 			$this->cyn_make_post_type('testimonial', 'نظر', 'نظرات بیماران', 'dashicons-format-chat', ['title', 'thumbnail', 'editor']);
 			$this->cyn_make_post_type('faq', 'سوال', 'سوالات متداول', 'dashicons-lightbulb', ['title', 'editor']);
 			$this->cyn_make_post_type('form', 'فرم', 'فرم ها', 'dashicons-format-status', ['title', 'thumbnail', 'editor']);
+			$this->cyn_make_post_type('newsletter', 'خبرنامه', 'خبرنامه ها', 'dashicons-email', ['title']);
 		}
 
 		public function cyn_taxonomy_register()
 		{
 
-			$this->cyn_make_taxonomy('department-cat', 'دسته بندی دپارتمان ها ', 'دسته بندی های دپارتمان ها', ['department']);
+			$this->cyn_make_taxonomy('department-cat', 'دسته بندی دپارتمان ها ', 'دسته بندی های دپارتمان ها', ['departments']);
 			$this->cyn_make_taxonomy('faq-cat', '  دسته بندی ', 'دسته بندی ها', ['faq']);
 		}
 
@@ -74,6 +76,8 @@ if (!class_exists('cyn_register')) {
 		 */
 		private function cyn_make_post_type($slug, $singular_name, $plural_name, $icon, $supports = ['title', 'thumbnail'])
 		{
+			
+
 			$labels = [
 				'name' => $singular_name,
 				'singular_name' => $singular_name,

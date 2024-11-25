@@ -24,7 +24,7 @@ $post_categories = get_terms([
 
 <div class="h-full">
 
-    <div class="grid justify-evenly sticky top-3 space-y-3">
+    <div class="justify-evenly sticky top-3 space-y-3">
         <!-- Search -->
         <?php cyn_get_component('blog-side-bar-search') ?>
 

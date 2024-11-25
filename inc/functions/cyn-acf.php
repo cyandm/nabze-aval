@@ -32,7 +32,7 @@ function cyn_acf_register_home_page()
 
 	$department = [
 		cyn_acf_add_tab('دپارتمان ها'),
-		cyn_acf_add_post_object('departments', 'انتخاب دپارتمان ها', 'department', '', 1),
+		cyn_acf_add_post_object('department', 'انتخاب دپارتمان ها', 'departments', '', 1),
 	];
 
 	$videos = [
@@ -142,14 +142,14 @@ function cyn_acf_register_about_us()
 	$fields = [
 
 		cyn_acf_add_tab('هیرو'),
-		cyn_acf_add_image('description_img', 'عکس معرفی', 33),
-		cyn_acf_add_text('description_title', 'سربرگ معرفی', 0, 33),
-		cyn_acf_add_wysiwyg('description_txt', 'متن معرفی', 33),
+		cyn_acf_add_image('introduction_img', 'عکس معرفی', 33),
+		cyn_acf_add_text('introduction_title', 'سربرگ معرفی', 0, 33),
+		cyn_acf_add_wysiwyg('introduction_txt', 'متن معرفی', 33),
 
 		cyn_acf_add_tab('توضیحات'),
-		cyn_acf_add_image('crow_img', 'عکس توضیحات',33),
-		cyn_acf_add_text('crow_title', 'سربرگ توضیحات', 0, 33),
-		cyn_acf_add_wysiwyg('crow_txt', 'متن توضیحات',33),
+		cyn_acf_add_image('description_img', 'عکس توضیحات',33),
+		cyn_acf_add_text('description_title', 'سربرگ توضیحات', 0, 33),
+		cyn_acf_add_wysiwyg('description_txt', 'متن توضیحات',33),
 
 	];
 
@@ -222,7 +222,7 @@ function cyn_acf_register_department()
 			[
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'department'
+				'value' => 'departments'
 			]
 		]
 	];

@@ -13216,6 +13216,47 @@
   }
   singleVideo();
 
+  // assets/js/modules/newsletter.js
+  function newsletter() {
+    const newsletterForm = document.querySelector("#newsletterForm");
+    const newsletterEmailInput = document.querySelector("#newsletter-email");
+    console.log(newsletterForm);
+    if (!newsletterForm) return;
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = newsletterEmailInput.value;
+      if (!validateEmail(email)) {
+        errorToast.showToast("\u0644\u0637\u0641\u0627 \u06CC\u06A9 \u0627\u06CC\u0645\u06CC\u0644 \u0645\u0639\u062A\u0628\u0631 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F.");
+        return;
+      }
+      jQuery(($) => {
+        $.ajax({
+          type: "POST",
+          url: restDetails.url + "cyn-api/v1/newsletter",
+          data: {
+            email
+          },
+          success: (res) => {
+            if (res.subscribed) {
+              successFormToast.showToast("\u0634\u0645\u0627 \u0628\u0627 \u0645\u0648\u0641\u0642\u06CC\u062A \u062F\u0631 \u062E\u0628\u0631\u0646\u0627\u0645\u0647 \u062B\u0628\u062A \u0646\u0627\u0645 \u06A9\u0631\u062F\u06CC\u062F.");
+              newsletterForm.reset();
+            } else {
+              errorToast.showToast("\u062E\u0637\u0627 \u062F\u0631 \u062B\u0628\u062A \u0646\u0627\u0645 \u062F\u0631 \u062E\u0628\u0631\u0646\u0627\u0645\u0647. \u0644\u0637\u0641\u0627 \u062F\u0648\u0628\u0627\u0631\u0647 \u062A\u0644\u0627\u0634 \u06A9\u0646\u06CC\u062F.");
+            }
+          },
+          error: (err) => {
+            errorToast.showToast("\u062E\u0637\u0627 \u062F\u0631 \u0627\u0631\u062A\u0628\u0627\u0637 \u0628\u0627 \u0633\u0631\u0648\u0631. \u0644\u0637\u0641\u0627 \u062F\u0648\u0628\u0627\u0631\u0647 \u062A\u0644\u0627\u0634 \u06A9\u0646\u06CC\u062F.");
+          }
+        });
+      });
+    });
+  }
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  }
+  newsletter();
+
   // assets/js/pages/home.js
   var containerComponent = class extends HTMLElement {
     constructor() {

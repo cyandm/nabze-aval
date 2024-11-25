@@ -42,19 +42,14 @@
                             </span>
                             <div class="space-y-3">
                                 <?php
-                                $services = get_posts([
-                                    'post_type' => 'service',
-                                    'posts_per_page' => 10,
-                                    'orderby' => 'menu_order',
-                                    'order' => 'ASC'
+
+                                wp_nav_menu([
+                                    'theme_location' => 'footer_department',
+                                    'container' => false,
+                                    'items_wrap' => '<div class="flex flex-col gap-2 list-none">%3$s</div>',
                                 ]);
 
-                                foreach ($services as $service): ?>
-                                    <a class="block text-primary-80 text-body_s"
-                                        href="<?php echo get_permalink($service->ID) ?>">
-                                        <?php echo $service->post_title ?>
-                                    </a>
-                                <?php endforeach; ?>
+                                ?>
                             </div>
                         </div>
 
@@ -126,9 +121,9 @@
 
                             <div class="text-[#D8DADF] text-body_s">
                                 <?php
-                                
+
                                 wp_nav_menu([
-                                    'theme_location' => 'footer',
+                                    'theme_location' => 'footer_access',
                                     'container' => false,
                                     'items_wrap' => '<div class="flex flex-col gap-2 list-none">%3$s</div>',
                                 ]);
@@ -154,6 +149,14 @@
                             <?php _e('برای دریافت آخرین اخبار ایمیل خود را وارد نمایید', 'cyn-dm') ?>
                         </p>
 
+                        <form id="newsletterForm" class="flex flex-col gap-2" method="POST">
+                            <input type="email" name="email" id="newsletter-email" class="py-2 px-4 rounded-3xl"
+                                placeholder="<?php _e('ایمیل خود را وارد کنید', 'cyn-dm') ?>" required>
+                            <button id="newsletter-submit" type="submit"
+                                class="border border-primary-100 text-primary-100 py-2 px-4 rounded-3xl hover:bg-primary-100 hover:text-[#1E3A8A] hover:border-[#1E3A8A]"><?php _e('دریافت خبرنامه', 'cyn-dm') ?></button>
+                        </form>
+
+                        <div id="newsletter-response"></div>
                     </div>
 
                 </div>

@@ -1,11 +1,9 @@
-<!-- Search -->
 <div class="bg-primary-100 p-5 rounded-3xl">
 
 	<!-- Title  -->
 	<div class="text-h6 pb-4 font-medium">
 		<?php _e( 'جستجو', 'cyn-dm' ) ?>
 	</div>
-
 
 	<!-- Input Search -->
 	<form action="/">

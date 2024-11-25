@@ -32,6 +32,15 @@ add_action('rest_api_init', function () {
 
         ]
     );
+    register_rest_route(
+        'cyn-api/v1',
+        '/newsletter',
+        [
+            'methods' => 'POST',
+            'callback' => 'cyn_handle_newsletter_subscription',
+            'permission_callback' => '__return_true'
+        ]
+    );
 });
 
 function cyn_handle_search_posts(WP_REST_Request $request)
@@ -109,6 +118,32 @@ function cyn_render_by_query($query, $post_type, array $args = [])
     }
     wp_reset_postdata();
     return ob_get_clean();
+}
+
+function cyn_handle_newsletter_subscription(WP_REST_Request $request)
+{
+    $email = sanitize_email($request->get_body_params()['email'] ?? '');
+    
+    // Check if the email is valid
+    if (!is_email($email)) {
+        return new WP_REST_Response(['error' => 'Invalid email address.'], 400);
+    }
+
+    // Save the email to the newsletter post type
+    $post_id = wp_insert_post([
+        'post_type' => 'newsletter',
+        'post_title' => $email, // Use the email as the title
+        'post_status' => 'publish',
+        'meta_input' => [
+            'email' => $email, // Store the email in post meta
+        ],
+    ]);
+
+    if (is_wp_error($post_id)) {
+        return new WP_REST_Response(['error' => 'Failed to save email.'], 500);
+    }
+
+    return new WP_REST_Response(['subscribed' => true, 'post_id' => $post_id], 200);
 }
 
 // copy by fateme 

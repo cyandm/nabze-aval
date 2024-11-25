@@ -45,11 +45,16 @@
                     <!-- Submit field -->
                     <div
                         class=" flex items-end justify-end max-lg:items-center max-lg:justify-center w-4/5 max-lg:w-full">
-                        <cyn-button type="primary" icon="#icon-Send">
+                        <button type="primary"
+                            class="rounded-full flex gap-1 transition-all duration-300 cursor-pointer bg-gradient-to-t from-[#1E3A8A] to-[#2C55C9] text-primary-100 shadow-md shadow-slate-400/50 hover:from-primary-20 hover:to-primary-20  px-4 py-2 text-body_s ">
                             <div class="me-2">
                                 <?php _e('ارسال پیام', 'cyn-dm') ?>
                             </div>
-                        </cyn-button>
+                            <svg class="icon text-primary-100 w-6 h-6 transform">
+                                <use href="#icon-Send" />
+                            </svg>
+
+                        </button>
                     </div>
                 </form>
             </div>

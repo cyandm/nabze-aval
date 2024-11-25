@@ -3,32 +3,30 @@
     <div class="xl:hidden">
         <div anim-delay="0.5" class="p-4 rounded-2xl text-[#1E3A8A] space-y-4 bg-primary-100 fade-in-down">
             <div class="space-y-2">
-                <div class="text-h2 md:text-[70px] font-extrabold">
-                    <?php
-                    $hero_title = get_field('hero_title');
-                    if ($hero_title) {
-                        echo $hero_title;
-                    } else {
-                        echo 'Hero Title Not Found';
-                    }
-                    ?>
-                </div>
+                <?php
+                $hero_title = get_field('hero_title');
+                if ($hero_title): ?>
+                    <div class="text-h2 md:text-[70px] font-extrabold">
+                        <?php echo esc_html($hero_title); ?>
+                    </div>
+                <?php endif; ?>
 
-                <div class="text-h4 md:text-h2 text-[#666666]">
-                    <?php
-                    $hero_subtitle = get_field('hero_subtitle');
-                    if ($hero_subtitle) {
-                        echo $hero_subtitle;
-                    } else {
-                        echo 'Subtitle Not Found';
-                    }
-                    ?>
-                </div>
+                <?php
+                $hero_subtitle = get_field('hero_subtitle');
+                if ($hero_subtitle): ?>
+                    <div class="text-h4 md:text-h2 text-[#666666]">
+                        <?php echo esc_html($hero_subtitle); ?>
+                    </div>
+                <?php endif; ?>
 
                 <div class="flex flex-row">
-                    <div class="text-body_s md:text-h5 text-[#666666]">
-                        <?php echo get_field('hero_desc') ?>
-                    </div>
+                    <?php 
+                    $hero_desc = get_field('hero_desc');
+                    if ($hero_desc): ?>
+                        <div class="text-body_s md:text-h5 text-[#666666]">
+                            <?php echo esc_html($hero_desc); ?>
+                        </div>
+                    <?php endif; ?>
 
                     <div class="w-[82px] md:w-[200px] bg-no-repeat bg-contain"
                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hero-vector.png');">
@@ -48,9 +46,13 @@
     <div class="flex flex-row gap-2 lg:hidden">
         <a href="<?php echo get_field('hero_card_url_1') ?>" anim-delay="1.1"
             class="bg-[#1E3A8A] p-4 max-md:p-3 rounded-xl flex-1 fade-in-down flex flex-col justify-between">
-            <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
-                <?php echo get_field('hero_card_title_1') ?>
-            </div>
+            <?php 
+            $hero_card_title_1 = get_field('hero_card_title_1');
+            if ($hero_card_title_1): ?>
+                <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
+                    <?php echo esc_html($hero_card_title_1); ?>
+                </div>
+            <?php endif; ?>
             <div class="flex justify-end items-center py-2 px-3">
                 <cyn-icon-button type="secondary"
                     class="rotate-0 border-primary-100 text-primary-100 hover:text-[#1E3A8A]" icon="#icon-Arrow-27">
@@ -60,11 +62,19 @@
 
         <div href="<?php echo get_field('hero_card_url_2') ?>" anim-delay="1.2"
             class="bg-[#1E3A8A] p-4 max-md:p-3 rounded-xl flex-1 fade-in-down flex flex-col justify-between">
-            <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
-                <?php echo get_field('hero_card_title_2') ?>
-                <div class="text-caption">
-                    <?php echo get_field('hero_card_sub_2') ?>
+            <?php 
+            $hero_card_title_2 = get_field('hero_card_title_2');
+            if ($hero_card_title_2): ?>
+                <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
+                    <?php echo esc_html($hero_card_title_2); ?>
                 </div>
+            <?php endif; ?>
+            <div class="text-caption">
+                <?php 
+                $hero_card_sub_2 = get_field('hero_card_sub_2');
+                if ($hero_card_sub_2): ?>
+                    <?php echo esc_html($hero_card_sub_2); ?>
+                <?php endif; ?>
             </div>
 
             <div class="flex justify-end items-center py-2 px-3">
@@ -88,32 +98,30 @@
         <div anim-delay="0.5" class="p-4 rounded-2xl text-[#1E3A8A] space-y-4 hidden xl:block fade-in-down">
             <div class="space-y-2">
 
-                <div class="text-h2 md:text-[70px] font-extrabold">
-                    <?php
-                    $hero_title = get_field('hero_title');
-                    if ($hero_title) {
-                        echo $hero_title;
-                    } else {
-                        echo 'Hero Title Not Found'; 
-                    }
-                    ?>
-                </div>
+                <?php
+                $hero_title = get_field('hero_title');
+                if ($hero_title): ?>
+                    <div class="text-h2 md:text-[70px] font-extrabold">
+                        <?php echo esc_html($hero_title); ?>
+                    </div>
+                <?php endif; ?>
 
-                <div class="text-h4 md:text-h2 text-[#666666]">
-                    <?php
-                    $hero_subtitle = get_field('hero_subtitle');
-                    if ($hero_subtitle) {
-                        echo $hero_subtitle;
-                    } else {
-                        echo 'Subtitle Not Found';
-                    }
-                    ?>
-                </div>
+                <?php
+                $hero_subtitle = get_field('hero_subtitle');
+                if ($hero_subtitle): ?>
+                    <div class="text-h4 md:text-h2 text-[#666666]">
+                        <?php echo esc_html($hero_subtitle); ?>
+                    </div>
+                <?php endif; ?>
 
                 <div class="flex flex-row">
-                    <div class="text-body_s md:text-h5 text-[#666666]">
-                        <?php echo get_field('hero_desc') ?>
-                    </div>
+                    <?php 
+                    $hero_desc = get_field('hero_desc');
+                    if ($hero_desc): ?>
+                        <div class="text-body_s md:text-h5 text-[#666666]">
+                            <?php echo esc_html($hero_desc); ?>
+                        </div>
+                    <?php endif; ?>
 
                     <div class="w-[200px] bg-no-repeat bg-contain"
                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hero-vector.png');">
@@ -127,9 +135,13 @@
         <div class="flex flex-row gap-3 max-lg:hidden">
             <a href="<?php echo get_field('hero_card_url_1') ?>" anim-delay="1.1"
                 class="bg-[#1E3A8A] p-4 max-md:p-3 rounded-xl flex-1 fade-in-down flex flex-col justify-between">
-                <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
-                    <?php echo get_field('hero_card_title_1') ?>
-                </div>
+                <?php 
+                $hero_card_title_1 = get_field('hero_card_title_1');
+                if ($hero_card_title_1): ?>
+                    <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
+                        <?php echo esc_html($hero_card_title_1); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="flex justify-end items-center py-2 px-3">
                     <cyn-icon-button type="secondary"
                         class="rotate-0 border-primary-100 text-primary-100 hover:text-[#1E3A8A]" icon="#icon-Arrow-27">
@@ -139,11 +151,19 @@
 
             <div href="<?php echo get_field('hero_card_url_2') ?>" anim-delay="1.2"
                 class="bg-[#1E3A8A] p-4 max-md:p-3 rounded-xl flex-1 fade-in-down flex flex-col justify-between">
-                <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
-                    <?php echo get_field('hero_card_title_2') ?>
-                    <div class="text-caption">
-                        <?php echo get_field('hero_card_sub_2') ?>
+                <?php 
+                $hero_card_title_2 = get_field('hero_card_title_2');
+                if ($hero_card_title_2): ?>
+                    <div class="text-primary-100 text-h4 max-xl:text-h5 max-md:text-body_s">
+                        <?php echo esc_html($hero_card_title_2); ?>
                     </div>
+                <?php endif; ?>
+                <div class="text-caption">
+                    <?php 
+                    $hero_card_sub_2 = get_field('hero_card_sub_2');
+                    if ($hero_card_sub_2): ?>
+                        <?php echo esc_html($hero_card_sub_2); ?>
+                    <?php endif; ?>
                 </div>
 
                 <div class="flex justify-end items-center py-2 px-3">
