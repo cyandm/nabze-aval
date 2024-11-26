@@ -17,7 +17,7 @@ require_once(__DIR__ . '/inc/classes/cyn-rest.php');
 
 //functions
 require_once(__DIR__ . '/inc/functions/cyn-general.php');
-// require_once(__DIR__ . '/inc/functions/cyn-update-checker.php');
+require_once(__DIR__ . '/inc/functions/cyn-update-checker.php');
 require_once(__DIR__ . '/inc/functions/cyn-menu.php');
 
 
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/inc/functions/cyn-acf-fields.php');
 require_once(__DIR__ . '/inc/functions/cyn-acf.php');
 
 //instance classes
-new cyn_theme_init(true, '1.3.0');
+new cyn_theme_init(false, '1.4.0');
 new cyn_register();
 new cyn_customize();
 new cyn_search();

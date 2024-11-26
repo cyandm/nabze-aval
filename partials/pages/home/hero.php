@@ -69,7 +69,7 @@
                     <?php echo esc_html($hero_card_title_2); ?>
                 </div>
             <?php endif; ?>
-            <div class="text-caption">
+            <div class="text-caption text-primary-100">
                 <?php 
                 $hero_card_sub_2 = get_field('hero_card_sub_2');
                 if ($hero_card_sub_2): ?>
@@ -158,7 +158,7 @@
                         <?php echo esc_html($hero_card_title_2); ?>
                     </div>
                 <?php endif; ?>
-                <div class="text-caption">
+                <div class="text-caption text-primary-100">
                     <?php 
                     $hero_card_sub_2 = get_field('hero_card_sub_2');
                     if ($hero_card_sub_2): ?>
@@ -188,8 +188,8 @@
                 <?php _e('خدمات رسانی در سراسر تهران', 'cyn-dm') ?>
             </p>
 
-            <div class="flex gap-4 justify-around max-md:flex-wrap max-md:grid max-md:grid-cols-2">
-                <?php for ($i = 1; $i <= 5; $i++): ?>
+            <div class="flex gap-4 justify-around max-lg:flex-wrap max-lg:grid max-lg:grid-cols-2">
+                <?php for ($i = 1; $i <= 6; $i++): ?>
                     <?php
                     $location_title = get_option("cyn_phone_number_title_$i");
                     $phone_number = get_option("cyn_phone_number_$i");

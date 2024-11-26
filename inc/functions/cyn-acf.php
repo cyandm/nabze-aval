@@ -53,9 +53,13 @@ function cyn_acf_register_home_page()
 	];
 
 	$cta = [
-		cyn_acf_add_tab('بنر'),
-		$advantage[] = cyn_acf_add_image("service_banner", "بنر", 50),
-		$advantage[] = cyn_acf_add_text('service_banner_url', 'لینک بنر', 0, 50),
+		cyn_acf_add_tab('بنر دسکتاپ'),
+		$advantage[] = cyn_acf_add_image("service_desktop_banner", "بنر", 50),
+		$advantage[] = cyn_acf_add_text('service_desktop_banner_url', 'لینک بنر', 0, 50),
+		
+		cyn_acf_add_tab('بنر گوشی'),
+		$advantage[] = cyn_acf_add_image("service_mobile_banner", "بنر", 50),
+		$advantage[] = cyn_acf_add_text('service_mobile_banner_url', 'لینک بنر', 0, 50),
 
 	];
 

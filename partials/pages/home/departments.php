@@ -1,5 +1,5 @@
 <?php
-$services = get_field('departments') ?? [];
+$services = get_field('department') ?? [];
 
 $swiper_show = $args['swiper'] ?? true;
 

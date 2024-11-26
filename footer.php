@@ -3,6 +3,61 @@
 <?php if ($render_template): ?>
     <footer>
 
+        <!-- App Bar  -->
+        <section class="text-caption w-full flex flex-col fixed bottom-4 z-30 md:hidden gap-3">
+
+            <!-- App Bar  -->
+            <div
+                class=" w-[calc(100%_-_1rem)] mx-auto rounded-3xl flex justify-between gap-8 items-center bg-primary-100 px-14 py-3 shadow-2xl">
+
+                <!-- button 1 -->
+                <a href="<?php echo get_option('cyn_app_bar_btn_link_1') ?>"
+                    class=" cursor-pointer flex flex-col gap-1 items-center justify-center ">
+
+                    <div class="bg-accent-40 rounded-full size-10 flex justify-center items-center text-primary-100">
+                        <div class=" icon size-6 ">
+                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_1') ?>">
+                        </div>
+                    </div>
+
+                    <p class="text-accent-40">
+                        <?php echo get_option('cyn_app_bar_btn_title_1') ?>
+                    </p>
+                </a>
+
+                <!-- Button 2 -->
+                <a href="<?php echo get_option('cyn_app_bar_btn_link_2') ?>"
+                    class="reservePopUpOpener cursor-pointer flex flex-col gap-1 items-center justify-center">
+
+                    <div class="bg-accent-40 rounded-full size-10 flex justify-center items-center text-primary-100">
+                        <div class=" icon size-6 ">
+                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_2') ?>">
+                        </div>
+                    </div>
+
+                    <p class="text-accent-40">
+                        <?php echo get_option('cyn_app_bar_btn_title_2') ?>
+                    </p>
+                </a>
+
+                <!-- Button 3 -->
+                <a href="<?php echo get_option('cyn_app_bar_btn_link_3') ?>"
+                    class="cursor-pointer flex flex-col gap-1 items-center justify-center">
+                    <div
+                        class="bg-accent-40 relative after:absolute after:rounded-full isolate after:-z-10 after:animate-ping after:bg-accent-40 after:content-[''] after:inset-0 rounded-full size-10 flex justify-center items-center text-primary-100">
+                        <div class=" icon size-6 ">
+                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_3') ?>">
+                        </div>
+                    </div>
+                    <p class="text-accent-40">
+                        <?php echo get_option('cyn_app_bar_btn_title_3') ?>
+                    </p>
+                </a>
+            </div>
+        </section>
+
+
+
         <div class="py-9 bg-noise bg-[#1E3A8A] text-primary-100 space-y-6">
             <div class="container flex justify-between items-center max-md:items-start max-md:gap-8 max-lg:flex-col">
                 <div class="flex gap-11 max-md:flex-col max-md:gap-8">
@@ -12,7 +67,7 @@
                         </span>
 
                         <div class="space-y-3 max-md:flex max-md:flex-wrap max-md:gap-4">
-                            <?php for ($i = 1; $i <= 5; $i++): ?>
+                            <?php for ($i = 1; $i <= 6; $i++): ?>
                                 <?php
                                 $location_title = get_option("cyn_phone_number_title_$i");
                                 $phone_number = get_option("cyn_phone_number_$i");
@@ -65,6 +120,22 @@
                                     <?php echo get_option('cyn_hours') ?>
                                 </p>
                             </div>
+                        </div>
+
+                        <div class="space-y-9 max-md:w-full">
+
+                            <div class="space-y-3">
+                                <span class="text-h6 max-md:text-body">
+                                    <?php _e('پست الکترونیکی ', 'cyn-dm') ?>
+                                </span>
+
+                                <div class="space-y-3">
+                                    <a class="block text-primary-80 text-body_s"
+                                        href="<?php echo 'mailto:' . get_option("cyn_email") ?>">
+                                        <?php echo get_option("cyn_email") ?>
+                                    </a>
+                                </div>
+                            </div>
 
                             <div class="space-y-3">
                                 <span class="text-h6 max-md:text-body">
@@ -79,39 +150,7 @@
                                     <?php endfor; ?>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="space-y-9 max-md:w-full">
-                            <div class="space-y-3">
-                                <span class="text-h6 max-md:text-body">
-                                    <?php _e('شماره تماس ', 'cyn-dm') ?>
-                                </span>
-
-                                <div class="space-y-3">
-
-                                    <p class="text-primary-80 text-body_s">
-                                        <?php _e('خط ویژه', 'cyn-dm') ?>
-                                    </p>
-
-                                    <a class="block text-primary-80 text-body_s"
-                                        href="<?php echo 'tel:' . get_option("cyn_special_number") ?>">
-                                        <?php echo get_option("cyn_special_number") ?>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="space-y-3">
-                                <span class="text-h6 max-md:text-body">
-                                    <?php _e('پست الکترونیکی ', 'cyn-dm') ?>
-                                </span>
-
-                                <div class="space-y-3">
-                                    <a class="block text-primary-80 text-body_s"
-                                        href="<?php echo 'mailto:' . get_option("cyn_email") ?>">
-                                        <?php echo get_option("cyn_email") ?>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="space-y-3 max-md:w-full">

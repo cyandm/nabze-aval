@@ -15,7 +15,7 @@
 
                     <div class="flex flex-col gap-2">
                         <div class="text-[#1E3A8A] text-h2 md:text-[72px]">
-                            <p><?php echo get_field('hero_title'); ?></p>
+                            <h1><?php echo get_field('hero_title'); ?></h1>
                         </div>
 
                         <div class="text-[#666666] text-[18px] md:text-h5">
