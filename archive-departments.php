@@ -6,7 +6,7 @@ global $wp_query;
 <!-- Archive Department Page -->
 <?php get_header() ?>
 
-<main class="container grid grid-cols-4 gap-3">
+<main class="container grid gap-3">
 
 	<!-- epartment Card -->
 	<section class="space-y-3 col-span-3 max-lg:col-span-4 max-xl:mx-5">

@@ -1,8 +1,9 @@
 <?php
-$blogs = get_field('blogs') ?? [];
+$blogs = get_field('posts') ?? [];
 
 if (! is_array($blogs) || count($blogs) < 1) {
 	$blogs = get_posts([
+		'post_type' => 'post',
 		'posts_per_page' => 3,
 		'fields' => 'ids',
 	]);
