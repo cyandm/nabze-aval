@@ -55,7 +55,7 @@
             <?php endif; ?>
             <div class="flex justify-end items-center py-2 px-3">
                 <cyn-icon-button type="secondary"
-                    class="rotate-0 border-primary-100 text-primary-100 hover:text-[#1E3A8A]" icon="#icon-Arrow-27">
+                    class="group rotate-0 border-primary-100 text-primary-100 group-hover:text-[#1E3A8A]" icon="#icon-Arrow-27">
                 </cyn-icon-button>
             </div>
         </a>

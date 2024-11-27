@@ -98,7 +98,7 @@ if (!class_exists('cyn_customize')) {
 			);
 
 			for ($i = 1; $i <= 6; $i++) {
-				$this->cyn_add_control($wp_customize, 'locations', 'text', "cyn_phone_number_title_$i", "نواحی $i");
+				$this->cyn_add_control($wp_customize, 'locations', 'text', "cyn_phone_number_title_$i", "ناحیه $i");
 				$this->cyn_add_control($wp_customize, 'locations', 'tel', "cyn_phone_number_$i", "شماره تلفن $i");
 			}
 

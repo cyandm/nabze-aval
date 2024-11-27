@@ -18,13 +18,13 @@
 
 	<?php if ($render_template): ?>
 
-		<header class="my-8 flex justify-between container sticky top-0 bg-[#f5f7f9] p-3">
+		<header class="my-8 flex justify-between container sticky top-0 bg-[#f5f7f9] p-3 z-50">
 			<div class="flex items-center gap-5">
 				<div class="logo size-10 max-md:hidden">
 					<?php the_custom_logo() ?>
 				</div>
 
-				<nav class="flex gap-4 max-xl:hidden ">
+				<nav class="flex gap-4 max-xl:hidden">
 					<?php
 					$menu = cyn_get_menu_items_by_slug('header');
 					

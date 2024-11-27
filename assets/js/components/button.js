@@ -149,7 +149,7 @@ class IconButton extends HTMLElement {
 
             case "secondary":
                 this.addClass(
-                    "bg-transparent text-primary-100 border border-primary-70 hover:bg-primary-100 hover:color-[#1E3A8A]"
+                    "bg-transparent text-primary-100 border border-primary-70 hover:bg-primary-100 hover:text-[#1E3A8A]"
                 );
                 break;
         }

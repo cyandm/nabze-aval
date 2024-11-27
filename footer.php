@@ -58,7 +58,7 @@
 
 
 
-        <div class="py-9 bg-noise bg-[#1E3A8A] text-primary-100 space-y-6">
+        <div class="pt-9 pb-17 md:py-9 bg-noise bg-[#1E3A8A] text-primary-100 space-y-6">
             <div class="container flex justify-between items-center max-md:items-start max-md:gap-8 max-lg:flex-col">
                 <div class="flex gap-11 max-md:flex-col max-md:gap-8">
                     <div class="space-y-3 max-md:order-first max-md:w-full">

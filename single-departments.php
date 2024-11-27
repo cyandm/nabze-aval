@@ -11,7 +11,7 @@
         <div class="lg:container grid grid-cols-3 gap-11">
 
             <?php if (get_field('hero_title') || get_field('hero_sub_title') || get_field('hero_btn_txt') && get_field('hero_btn_url')): ?>
-                <div class="col-span-3 md:col-span-2  flex flex-col justify-center gap-11 w">
+                <div class="col-span-3 md:col-span-2 flex flex-col justify-center gap-11 w">
 
                     <div class="flex flex-col gap-2">
                         <div class="text-[#1E3A8A] text-h2 md:text-[72px]">
@@ -19,7 +19,7 @@
                         </div>
 
                         <div class="text-[#666666] text-[18px] md:text-h5">
-                            <p><?php echo get_field('hero_sub_title'); ?></p>
+                            <div><?php echo get_field('hero_sub_title'); ?></div>
                         </div>
                     </div>
 
@@ -55,10 +55,10 @@
                 <div class="grid grid-cols-3 gap-11 items-center">
 
                     <div class="col-span-3 md:col-span-2 flex flex-col justify-center gap-6">
-                        <p class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_1_title'); ?></p>
-                        <p class="text-[14px] md:text-body_s leading-7 text-[#475569]">
+                        <div class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_1_title'); ?></div>
+                        <div class="text-[14px] md:text-body_s leading-9 text-[#475569]">
                             <?php echo get_field('section_1_txt'); ?>
-                        </p>
+                        </div>
                     </div>
 
                     <div class="col-span-3 md:col-span-1 max-md:order-1">
@@ -76,10 +76,10 @@
                     </div>
 
                     <div class="col-span-3 md:col-span-2 flex flex-col justify-center gap-6">
-                        <p class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_2_title'); ?></p>
-                        <p class="text-[14px] md:text-body_s leading-7 text-[#475569]">
+                        <div class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_2_title'); ?></div>
+                        <div class="text-[14px] md:text-body_s leading-9 text-[#475569]">
                             <?php echo get_field('section_2_txt'); ?>
-                        </p>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -91,7 +91,7 @@
                 <div class="grid grid-cols-3 gap-11 py-11 max-md:grid-cols-1 max-md:flex max-md:flex-col">
                     <!-- Title -->
                     <div class="col-span-3 md:col-span-2 order-1 md:order-none">
-                        <p class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_1_title'); ?></p>
+                        <div class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_1_title'); ?></div>
                     </div>
 
                     <!-- Image -->
@@ -101,9 +101,9 @@
 
                     <!-- Text -->
                     <div class="col-span-3 md:col-span-2 order-3 md:order-none">
-                        <p class="text-[14px] md:text-body_s leading-8 text-[#475569]">
+                        <div class="text-[14px] md:text-body_s leading-8 text-[#475569]">
                             <?php echo get_field('section_1_txt'); ?>
-                        </p>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -112,7 +112,7 @@
                 <div class="grid grid-cols-3 gap-11 py-11 max-md:grid-cols-1 max-md:flex max-md:flex-col">
                     <!-- Title -->
                     <div class="col-span-3 md:col-span-2 order-1 md:order-none">
-                        <p class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_2_title'); ?></p>
+                        <div class="text-h5 md:text-h2 text-[#1E293B]"><?php echo get_field('section_2_title'); ?></div>
                     </div>
 
                     <!-- Image -->
@@ -122,9 +122,9 @@
 
                     <!-- Text -->
                     <div class="col-span-3 md:col-span-2 order-3 md:order-none">
-                        <p class="text-[14px] md:text-body_s leading-8 text-[#475569]">
+                        <div class="text-[14px] md:text-body_s leading-8 text-[#475569]">
                             <?php echo get_field('section_2_txt'); ?>
-                        </p>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -195,18 +195,18 @@
                 <!-- Title -->
                 <?php if (get_field('section_3_title')): ?>
                     <div>
-                        <p class="text-h5 md:text-h2 text-[#3C3F49] ">
+                        <div class="text-h5 md:text-h2 text-[#3C3F49] ">
                             <?php echo get_field('section_3_title'); ?>
-                        </p>
+                        </div>
                     </div>
                 <?php endif; ?>
 
                 <!-- Desktop Text -->
                 <?php if (get_field('section_3_txt')): ?>
                     <div class="max-lg:hidden">
-                        <p class="text-body_s text-[#6A6F81] leading-[34px]">
+                        <div class="text-body_s text-[#6A6F81] leading-[34px]">
                             <?php echo get_field('section_3_txt'); ?>
-                        </p>
+                        </div>
                     </div>
                 <?php endif; ?>
 
@@ -231,9 +231,9 @@
             <!-- Mobile Text -->
             <?php if (get_field('section_3_txt')): ?>
                 <div class="col-span-5 lg:hidden">
-                    <p class="text-body_s text-[#6A6F81] leading-[34px]">
+                    <div class="text-body_s text-[#6A6F81] leading-[34px]">
                         <?php echo get_field('section_3_txt'); ?>
-                    </p>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
@@ -247,18 +247,18 @@
                     <!-- Title -->
                     <?php if (get_field('section_4_title')): ?>
                         <div>
-                            <p class="text-h5 md:text-h2 text-[#3C3F49]">
+                            <div class="text-h5 md:text-h2 text-[#3C3F49]">
                                 <?php echo get_field('section_4_title'); ?>
-                            </p>
+                            </div>
                         </div>
                     <?php endif; ?>
 
                     <!-- Desktop Text -->
                     <?php if (get_field('section_4_txt')): ?>
                         <div class="max-lg:hidden">
-                            <p class="text-body_s text-[#6A6F81] leading-[34px]">
+                            <div class="text-body_s text-[#6A6F81] leading-[34px]">
                                 <?php echo get_field('section_4_txt'); ?>
-                            </p>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -273,9 +273,9 @@
                 <!-- Mobile Text -->
                 <?php if (get_field('section_4_txt')): ?>
                     <div class="col-span-5 lg:hidden">
-                        <p class="text-body_s text-[#6A6F81] leading-[34px]">
+                        <div class="text-body_s text-[#6A6F81] leading-[34px]">
                             <?php echo get_field('section_4_txt'); ?>
-                        </p>
+                        </div>
                     </div>
                 <?php endif; ?>
             </div>
