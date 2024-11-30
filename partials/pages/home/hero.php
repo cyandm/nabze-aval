@@ -79,7 +79,7 @@
 
             <div class="flex justify-end items-center py-2 px-3">
                 <div class="rounded-3xl bg-primary-100 flex items-center px-3 py-1 gap-2">
-                    <a class="block text-[#1E3A8A] text-body_s"
+                    <a class="block text-[#1E3A8A] text-body_s whitespace-nowrap"
                         href="<?php echo 'tel:' . get_option("cyn_special_number") ?>">
                         <?php echo get_option("cyn_special_number") ?>
                     </a>
@@ -88,7 +88,6 @@
                     </svg>
                 </div>
             </div>
-
         </div>
     </div>
 
