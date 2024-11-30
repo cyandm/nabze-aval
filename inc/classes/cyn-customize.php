@@ -189,41 +189,14 @@ if (!class_exists('cyn_customize')) {
 			$wp_customize->add_section(
 				'btn_1',
 				[
-					'title' => 'دکمه اول',
+					'title' => 'دکمه تماس',
 					'priority' => 1,
 					'panel' => 'app_bar'
 				]
 			);
 
 			$this->cyn_add_control($wp_customize, 'btn_1', 'file', "cyn_app_bar_btn_icon_1", "آیکون ۱");
-			$this->cyn_add_control($wp_customize, 'btn_1', 'text', "cyn_app_bar_btn_title_1", "تایتل ۱");
 			$this->cyn_add_control($wp_customize, 'btn_1', 'text', "cyn_app_bar_btn_link_1", "لینک ۱");
-
-			$wp_customize->add_section(
-				'btn_2',
-				[
-					'title' => 'دکمه دوم',
-					'priority' => 1,
-					'panel' => 'app_bar'
-				]
-			);
-
-			$this->cyn_add_control($wp_customize, 'btn_2', 'file', "cyn_app_bar_btn_icon_2", "آیکون ۲");
-			$this->cyn_add_control($wp_customize, 'btn_2', 'text', "cyn_app_bar_btn_title_2", "تایتل ۲");
-			$this->cyn_add_control($wp_customize, 'btn_2', 'text', "cyn_app_bar_btn_link_2", "لینک ۲");
-
-			$wp_customize->add_section(
-				'btn_3',
-				[
-					'title' => 'دکمه سوم',
-					'priority' => 1,
-					'panel' => 'app_bar'
-				]
-			);
-
-			$this->cyn_add_control($wp_customize, 'btn_3', 'file', "cyn_app_bar_btn_icon_3", "آیکون ۳");
-			$this->cyn_add_control($wp_customize, 'btn_3', 'text', "cyn_app_bar_btn_title_3", "تایتل ۳");
-			$this->cyn_add_control($wp_customize, 'btn_3', 'text', "cyn_app_bar_btn_link_3", "لینک ۳");
 		}
 		private function cyn_register_panel_custom_code($wp_customize)
 		{

@@ -4,59 +4,17 @@
     <footer>
 
         <!-- App Bar  -->
-        <section class="text-caption w-full flex flex-col fixed bottom-4 z-30 md:hidden gap-3">
+        <section class="text-caption w-full flex flex-col items-end fixed bottom-4 md:hidden gap-3 px-[22px] py-2 z-50">
+            <a style="transition: transform .16s linear 0s, opacity .08s linear 0s;" href="<?php echo 'tel:' . get_option("cyn_app_bar_btn_link_1") ?>"
+                class="cursor-pointer flex flex-col gap-1 items-center justify-center transition-transform duration-200 hover:scale-110">
 
-            <!-- App Bar  -->
-            <div
-                class=" w-[calc(100%_-_1rem)] mx-auto rounded-3xl flex justify-between gap-8 items-center bg-primary-100 px-14 py-3 shadow-2xl">
-
-                <!-- button 1 -->
-                <a href="<?php echo get_option('cyn_app_bar_btn_link_1') ?>"
-                    class=" cursor-pointer flex flex-col gap-1 items-center justify-center ">
-
-                    <div class="bg-accent-40 rounded-full size-10 flex justify-center items-center text-primary-100">
-                        <div class=" icon size-6 ">
-                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_1') ?>">
-                        </div>
+                <div style=" box-shadow: 0 1px 3px 0 #0000004d, 0 4px 8px 3px #00000026;" class="bg-[#EA580C] rounded-2xl size-[55px] flex justify-center items-center text-primary-100">
+                    <div class="icon size-6 ">
+                        <img src="<?php echo get_option('cyn_app_bar_btn_icon_1') ?>">
                     </div>
-
-                    <p class="text-accent-40">
-                        <?php echo get_option('cyn_app_bar_btn_title_1') ?>
-                    </p>
-                </a>
-
-                <!-- Button 2 -->
-                <a href="<?php echo get_option('cyn_app_bar_btn_link_2') ?>"
-                    class="reservePopUpOpener cursor-pointer flex flex-col gap-1 items-center justify-center">
-
-                    <div class="bg-accent-40 rounded-full size-10 flex justify-center items-center text-primary-100">
-                        <div class=" icon size-6 ">
-                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_2') ?>">
-                        </div>
-                    </div>
-
-                    <p class="text-accent-40">
-                        <?php echo get_option('cyn_app_bar_btn_title_2') ?>
-                    </p>
-                </a>
-
-                <!-- Button 3 -->
-                <a href="<?php echo get_option('cyn_app_bar_btn_link_3') ?>"
-                    class="cursor-pointer flex flex-col gap-1 items-center justify-center">
-                    <div
-                        class="bg-accent-40 relative after:absolute after:rounded-full isolate after:-z-10 after:animate-ping after:bg-accent-40 after:content-[''] after:inset-0 rounded-full size-10 flex justify-center items-center text-primary-100">
-                        <div class=" icon size-6 ">
-                            <img src="<?php echo get_option('cyn_app_bar_btn_icon_3') ?>">
-                        </div>
-                    </div>
-                    <p class="text-accent-40">
-                        <?php echo get_option('cyn_app_bar_btn_title_3') ?>
-                    </p>
-                </a>
-            </div>
+                </div>
+            </a>
         </section>
-
-
 
         <div class="pt-9 pb-17 md:py-9 bg-noise bg-[#1E3A8A] text-primary-100 space-y-6">
             <div class="container flex justify-between items-center max-md:items-start max-md:gap-8 max-lg:flex-col">

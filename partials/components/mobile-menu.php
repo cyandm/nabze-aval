@@ -7,9 +7,12 @@
             <use href="#icon-Arrow,-Forward" />
         </svg>
 
-        <div class="logo size-10">
-            <?php the_custom_logo() ?>
-        </div>
+        <a href="/?search-type=all&s=">
+            <svg class="icon size-10">
+                <use href="#icon-Search,-Loupe" />
+            </svg>
+        </a>
+        
     </div>
 
     <div class="divide-y-2 divide-primary-90 ">

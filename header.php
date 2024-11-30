@@ -9,7 +9,7 @@
 	<?php wp_head() ?>
 </head>
 
-<body <?php body_class('bg-background-main font-peyda text-primary-20') ?>>
+<body <?php body_class('bg-background-main font-peyda text-primary-20 overflow-x-hidden') ?>>
 	<?php get_template_part('/assets/icons/icons') ?>
 
 	<?php wp_body_open() ?>
@@ -20,6 +20,7 @@
 
 		<header class="my-8 flex justify-between container sticky top-0 bg-[#f5f7f9] p-3 z-50">
 			<div class="flex items-center gap-5">
+
 				<div class="logo size-10 max-md:hidden">
 					<?php the_custom_logo() ?>
 				</div>
@@ -74,9 +75,13 @@
 					</svg>
 				</a>
 
-				<cyn-button type="primary" size="md" href="<?php echo 'tel:' . get_option("cyn_special_number") ?>">
+				<cyn-button class="md:block hidden" type="primary" size="md" href="<?php echo 'tel:' . get_option("cyn_special_number") ?>">
 					<?php _e('تماس بگیر', 'cyn-dm') ?>
 				</cyn-button>
+
+				<div class="logo size-10 block md:hidden">
+					<?php the_custom_logo() ?>
+				</div>
 			</div>
 		</header>
 	<?php endif; ?>
