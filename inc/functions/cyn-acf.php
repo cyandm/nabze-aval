@@ -200,8 +200,11 @@ function cyn_acf_register_department()
 		cyn_acf_add_wysiwyg('section_2_txt', 'متن بخش دوم', 33),
 
 		cyn_acf_add_tab('بنر'),
-		cyn_acf_add_image("department_banner", "بنر"),
-		cyn_acf_add_text('department_banner_url', 'لینک بنر', 0, 50),
+		cyn_acf_add_image("department_desktop_banner", "بنر دسکتاپ",50),
+		cyn_acf_add_text('department_desktop_banner_url', 'لینک بنر دسکتاپ', 0, 50),
+
+		cyn_acf_add_image("department_mobile_banner", "بنر موبایل",50),
+		cyn_acf_add_text('department_mobile_banner_url', 'لینک بنر موبایل', 0, 50),
 
 		cyn_acf_add_tab('بخش دوم'),
 		cyn_acf_add_group('slideshow_group', 'عکس', $section_2_imgs),

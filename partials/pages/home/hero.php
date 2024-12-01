@@ -195,7 +195,7 @@
 
                     if (!empty($location_title) || !empty($phone_number)):
                         ?>
-                        <div class="grid gap-2 text-primary-100 text-body_s">
+                        <div class="grid gap-2 text-primary-100 text-body_s whitespace-nowrap">
                             <?php if (!empty($location_title)): ?>
                                 <div class="text-[#334155] text-[14px]"><?php echo esc_html($location_title); ?></div>
                             <?php endif; ?>

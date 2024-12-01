@@ -1,6 +1,14 @@
 <?php get_header() ?>
 
-<?php $postId = $args['post-id'] ?? get_the_ID(); ?>
+<?php $postId = $args['post-id'] ?? get_the_ID();
+
+$banner_desktop_image = get_field('department_desktop_banner');
+$banner_desktop_image_url = get_field('department_desktop_banner_url');
+
+$banner_mobile_image = get_field('department_mobile_banner');
+$banner_mobile_image_url = get_field('department_mobile_banner_url');
+
+?>
 
 <!-- Service Main -->
 <main class="px-4 lg:container">
@@ -147,15 +155,15 @@
             </div>
 
             <div>
-                <div class="flex gap-4 justify-between max-md:flex-wrap max-md:grid max-md:grid-cols-2">
-                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                <div class="flex gap-4 justify-around max-lg:flex-wrap max-lg:grid max-lg:grid-cols-2">
+                    <?php for ($i = 1; $i <= 6; $i++): ?>
                         <?php
                         $location_title = get_option("cyn_phone_number_title_$i");
                         $phone_number = get_option("cyn_phone_number_$i");
 
                         if (!empty($location_title) || !empty($phone_number)):
                             ?>
-                            <div class="grid gap-2 text-primary-100 text-body_s">
+                            <div class="grid gap-2 text-primary-100 text-body_s whitespace-nowrap">
                                 <?php if (!empty($location_title)): ?>
                                     <div class="text-[#334155] text-[14px]"><?php echo esc_html($location_title); ?></div>
                                 <?php endif; ?>
@@ -176,14 +184,23 @@
         <div class="py-8"></div>
 
         <!-- Banner -->
-        <?php if (get_field('department_banner')): ?>
-            <div>
-                <a href="<?php echo get_field('department_banner_url'); ?>" class="block">
-                    <img class="w-full rounded-[20px] object-cover"
-                        src="<?php echo wp_get_attachment_image_url(get_field('department_banner'), 'full'); ?>" alt="">
+        <div>
+            <?php if (!empty($banner_desktop_image) && !empty($banner_desktop_image_url)): ?>
+                <a href="<?php echo esc_url($banner_desktop_image_url) ?>">
+                    <div class="hidden min-[425px]:block rounded-[20px] bg-no-repeat bg-cover bg-center w-full h-[150px] xs:h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px] transition-all duration-300"
+                        style="background-image: url('<?php echo wp_get_attachment_image_url($banner_desktop_image, 'full', false) ?>');">
+                    </div>
                 </a>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if (!empty($banner_mobile_image) && !empty($banner_mobile_image_url)): ?>
+                <a href="<?php echo esc_url($banner_mobile_image_url) ?>">
+                    <div class="block min-[425px]:hidden rounded-[20px] bg-no-repeat bg-cover bg-center w-full h-[400px] transition-all duration-300"
+                        style="background-image: url('<?php echo wp_get_attachment_image_url($banner_mobile_image, 'full', false) ?>');">
+                    </div>
+                </a>
+            <?php endif; ?>
+        </div>
 
         <div class="py-8"></div>
 
