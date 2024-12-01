@@ -5,10 +5,12 @@
 
         <!-- App Bar  -->
         <section class="text-caption w-full flex flex-col items-end fixed bottom-4 md:hidden gap-3 px-[22px] py-2 z-50">
-            <a style="transition: transform .16s linear 0s, opacity .08s linear 0s;" href="<?php echo 'tel:' . get_option("cyn_app_bar_btn_link_1") ?>"
+            <a style="transition: transform .16s linear 0s, opacity .08s linear 0s;"
+                href="<?php echo 'tel:' . get_option("cyn_app_bar_btn_link_1") ?>"
                 class="cursor-pointer flex flex-col gap-1 items-center justify-center transition-transform duration-200 hover:scale-110">
 
-                <div style=" box-shadow: 0 1px 3px 0 #0000004d, 0 4px 8px 3px #00000026;" class="bg-[#EA580C] rounded-2xl size-[55px] flex justify-center items-center text-primary-100">
+                <div style=" box-shadow: 0 1px 3px 0 #0000004d, 0 4px 8px 3px #00000026;"
+                    class="bg-[#EA580C] rounded-2xl size-[55px] flex justify-center items-center text-primary-100">
                     <div class="icon size-6 ">
                         <img src="<?php echo get_option('cyn_app_bar_btn_icon_1') ?>">
                     </div>
@@ -159,16 +161,17 @@
                 </div>
             </div>
 
+            <a href="<?php echo get_option('cyn_footer_btn')?>">
+                <div class="text-[#D8DADF] text-center">
+                    <span class="text-caption">
+                        <?php _e('Designed by ', 'nabz-aval') ?>
+                    </span>
 
-            <div class="text-[#D8DADF] text-center">
-                <span class="text-caption">
-                    <?php _e('Designed by ', 'nabz-aval') ?>
-                </span>
-
-                <span class="text-body_s">
-                    <?php _e('CyanDM', 'nabz-aval') ?>
-                </span>
-            </div>
+                    <span class="text-body_s">
+                        <?php _e('CyanDM', 'nabz-aval') ?>
+                    </span>
+                </div>
+            </a>
 
         </div>
 

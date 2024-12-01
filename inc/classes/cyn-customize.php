@@ -174,6 +174,17 @@ if (!class_exists('cyn_customize')) {
 			);
 
 			$this->cyn_add_control($wp_customize, 'faq_btn', 'text', "cyn_faq_btn", "دکمه سوالات متداول");
+
+			$wp_customize->add_section(
+				'cyan_btn',
+				[
+					'title' => 'دکمه فوتر سایان',
+					'priority' => 1,
+					'panel' => 'general'
+				]
+			);
+
+			$this->cyn_add_control($wp_customize, 'cyan_btn', 'text', "cyn_footer_btn", "دکمه فوتر سایان");
 		}
 
 		private function cyn_register_app_bar($wp_customize)
